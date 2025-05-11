@@ -1,7 +1,7 @@
 import 'package:filme_flix_bruno.rodrigues/components/buttons/PrimaryButton.dart';
 import 'package:filme_flix_bruno.rodrigues/components/buttons/SecondaryButton.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -46,7 +46,10 @@ class LandingPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13),
                 ),
-                PrimaryButton(onPressed: () {}, text: "Login"),
+                PrimaryButton(
+                  onPressed: () => context.go('/home'),
+                  text: "Login",
+                ),
                 SecondaryButton(onPressed: () {}, text: "Sign Up"),
               ],
             ),
